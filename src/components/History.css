@@ -1,0 +1,79 @@
+/* ============================================================
+   History.css – Recent generation history panel
+   ============================================================ */
+
+.history-section { padding: 0 1.5rem 2rem; max-width: 680px; margin: 0 auto; }
+.history-card { padding: 1.5rem; }
+
+.history-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.history-title {
+  font-size: 1.05rem; font-weight: 700; color: #f1f5f9;
+  display: flex; align-items: center; gap: 0.5rem; margin: 0;
+}
+
+.history-count {
+  background: rgba(139, 92, 246, 0.2); color: #a78bfa;
+  font-size: 0.72rem; font-weight: 700;
+  padding: 0.15rem 0.5rem; border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.btn-clear-history {
+  background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171; font-size: 0.78rem; font-weight: 600;
+  padding: 0.3rem 0.75rem; border-radius: 8px; cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-clear-history:hover { background: rgba(239, 68, 68, 0.25); }
+
+.history-empty { text-align: center; padding: 2rem 0; color: #475569; }
+.empty-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.history-empty p { font-size: 0.95rem; color: #64748b; margin-bottom: 0.3rem; }
+.history-empty span { font-size: 0.82rem; color: #475569; }
+
+.history-list { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.history-item {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(139, 92, 246, 0.06);
+  border: 1px solid rgba(139, 92, 246, 0.12);
+  border-radius: 10px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  animation: slideIn 0.3s ease both;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.history-item:hover {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateX(3px);
+}
+
+.history-item-index { font-size: 0.72rem; font-weight: 700; color: #8b5cf6; min-width: 28px; }
+
+.history-item-content { flex: 1; overflow: hidden; }
+
+.history-text {
+  font-size: 0.88rem; color: #f1f5f9; margin: 0 0 0.25rem;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.history-meta { display: flex; gap: 0.75rem; }
+.history-size, .history-time { font-size: 0.72rem; color: #64748b; }
+
+.history-copy-btn {
+  background: rgba(139, 92, 246, 0.1); border: none; border-radius: 7px;
+  color: #8b5cf6; cursor: pointer; padding: 0.35rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s ease, transform 0.15s ease; flex-shrink: 0;
+}
+.history-copy-btn:hover { background: rgba(139, 92, 246, 0.25); transform: scale(1.1); }
