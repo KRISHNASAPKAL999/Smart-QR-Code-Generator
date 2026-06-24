@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "rewrites": [
     {
@@ -7,13 +6,3 @@
     }
   ]
 }
-=======
-{
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
-}
->>>>>>> 971ad3eb568ee6c0423c55c37ec2be25fed4c3b5
